@@ -1,0 +1,17 @@
+<h2>Update your password.</h2>
+
+<%= form_for @user, url: password_reset_path(@user.perishable_token) do |f| %>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div>
+    <%= f.submit 'Save' %>
+  </div>
+<% end %>
